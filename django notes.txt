@@ -1,0 +1,56 @@
+django notes
+
+use in GitBASH in django folder\
+$ code . to open from terminal into vs code
+work on projects in vs code (open django folder) USE GITBASH TERMINAL NOT POWERSHELL
+
+v enviroment name: djenv
+
+start virtual enviroment:
+
+$ source [enviroment name]/Scripts/activate
+
+deactivate virtual enviroment:
+
+$ deactivate
+
+Check packages:
+
+$ pip freeze
+
+Start a project:
+
+$ django-admin startproject [site name] .
+
+- the . is to make sure the project is installed in the root folder (django folder)
+
+After making project:
+$ python manage.py runserver
+
+paste resulting https ip into browser
+
+To create a new app:
+
+python manage.py startapp [app name]
+
+to create a super user:
+
+python manage.py createsuperuser
+
+to change password:
+
+python manage.py changepassword [your username]
+
+to create tables:
+
+python manage.py makemigrations
+
+--
+
+
+Supporting static files (imgs, css)
+under settings.py, add STATIC_ROOT = BASE_DIR /[folder name]
+STATICFILE_DIRS = [folder path]
+
+{% load static %} at top of html file to load, href for css & src for img file is
+"{% static 'file' %}"
